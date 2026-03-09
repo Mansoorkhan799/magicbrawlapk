@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 2, 6, 23;
+  --background-end-rgb: 2, 6, 23;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Prevent CLS by ensuring images don't shift layout */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent layout shift for footer - reserve space, contain layout */
+footer {
+  contain: layout style paint;
+  height: auto;
+  min-height: 320px;
+}
+@media (min-width: 768px) {
+  footer {
+    min-height: 280px;
+  }
+}
+
+/* Optimize font loading to prevent layout shift */
+body {
+  font-display: swap;
+}
+
+/* Prevent font-related layout shifts */
+* {
+  font-family: inherit;
+}
+
+/* Reserve space for hero section to prevent CLS */
+section.py-8 {
+  min-height: 400px;
+}
+
+/* Reserve space for common elements to prevent CLS */
+main {
+  min-height: calc(100vh - 200px);
+}
+
+/* Optimize LCP element rendering */
+p.text-lg.text-gray-300.leading-relaxed {
+  contain: layout style;
+  min-height: 120px;
+  display: block;
+}
+
+/* Reduce layout shifts */
+section {
+  contain: layout;
+}
+
+.download-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+}
+
+.download-btn:hover .download-icon {
+  animation: bounce 0.5s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: rgba(10, 16, 41, 0.8);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Prevent layout shift by ensuring content takes up space */
+.stars-bg {
+  pointer-events: none;
+}
+
+/* Interactive page animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px 4px rgba(14, 165, 233, 0.3);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Stagger delays for sequential reveal */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+.stagger-7 { animation-delay: 0.7s; } 

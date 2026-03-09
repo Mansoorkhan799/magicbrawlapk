@@ -24,15 +24,15 @@ img {
   height: auto;
 }
 
-/* Prevent layout shift for footer - reserve space, contain layout */
+/* Prevent layout shift for footer - reserve space, promote to own layer */
 footer {
-  contain: layout style paint;
-  height: auto;
   min-height: 320px;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 @media (min-width: 768px) {
   footer {
-    min-height: 280px;
+    min-height: 300px;
   }
 }
 
@@ -107,6 +107,16 @@ section {
 .stat-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Magic Brawl APK content links - light blue with underline (normal & hover) */
+a.text-accent {
+  color: #60a5fa !important;
+  text-decoration: underline;
+}
+a.text-accent:hover {
+  color: #93c5fd !important;
+  text-decoration: underline;
 }
 
 /* Prevent layout shift by ensuring content takes up space */

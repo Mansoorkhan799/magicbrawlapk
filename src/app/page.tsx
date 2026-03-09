@@ -129,7 +129,7 @@ export default function Home() {
             </div>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              Download the latest <Link href="/" className="text-white font-bold hover:text-accent transition-colors">Magic Brawl APK</Link> v50.221, the ultimate rebirth of Brawl Stars and its best times! Experience our private server with unlimited gems, coins, and exciting new content. Enjoy <strong className="text-accent">Season 18 – THE RESCUE!</strong> featuring new brawlers Maisie and Hank, exclusive author pins, daily giveaways including the unique Gamer Sprout skin, and all content unlocked from the start — online battles, all characters, second star powers, and gadgets. No real money needed.
+              Download the latest <Link href="/" className="text-accent font-bold">Magic Brawl APK</Link> v50.221, the ultimate rebirth of Brawl Stars and its best times! Experience our private server with unlimited gems, coins, and exciting new content. Enjoy <strong className="text-accent">Season 18 – THE RESCUE!</strong> featuring new brawlers Maisie and Hank, exclusive author pins, daily giveaways including the unique Gamer Sprout skin, and all content unlocked from the start — online battles, all characters, second star powers, and gadgets. No real money needed.
             </p>
 
             <div className="flex justify-center md:justify-start my-6">
@@ -153,7 +153,7 @@ export default function Home() {
           </div>
           <div className="mt-8 md:hidden flex justify-center">
             <div className="relative" style={{ width: '260px', height: '260px' }}>
-              <Image src="/magic-brawl-apk.webp" alt="Magic Brawl APK v50.221" width={260} height={260} className="object-contain drop-shadow-2xl" priority fetchPriority="high" quality={90} sizes="260px" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              <Image src="/magic-brawl-apk.webp" alt="Magic Brawl APK v50.221" width={260} height={260} className="object-contain drop-shadow-2xl" priority fetchPriority="high" quality={90} sizes="(max-width: 768px) 260px, 340px" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </div>
           </div>
         </div>
@@ -532,7 +532,7 @@ export default function Home() {
           <div className="space-y-6 max-w-4xl mx-auto">
             <div className="bg-[#0A1029] rounded-lg p-6 border-l-4 border-[#FFA500]">
               <h3 className="text-lg font-bold text-[#FFA500] mb-2">Step 1: Download the APK</h3>
-              <p className="text-gray-300 mb-4">Click the Download button on <Link href="/" className="text-accent hover:underline">magicbrawlapk.net</Link> to download the Magic Brawl APK file to your Android device.</p>
+              <p className="text-gray-300 mb-4">Click the Download button on <Link href="/" className="text-accent underline">magicbrawlapk.net</Link> to download the Magic Brawl APK file to your Android device.</p>
               <div className="flex justify-center">
                 <Image src="/magic-brawl-apk-download-step1-removebg-preview.webp" alt="Magic Brawl APK Download Step 1" width={280} height={500} className="rounded-lg object-contain max-h-[400px] w-auto" />
               </div>
@@ -575,7 +575,7 @@ export default function Home() {
           <div className="space-y-6 max-w-4xl mx-auto">
             <div className="bg-[#0A1029] rounded-lg p-6 border-l-4 border-[#60a5fa]">
               <h3 className="text-lg font-bold text-[#60a5fa] mb-2">Step 1: Download the IPA File</h3>
-              <p className="text-gray-300">Select your server and download the Magic Brawl IPA file from <a href="https://dl.magicbrawlapk.net/file/Magicbrawlapk/magic-brawl-apk-by-magicbrawlapk.net.apk.ipa" className="text-accent hover:underline">magicbrawlapk.net</a>.</p>
+              <p className="text-gray-300">Select your server and download the Magic Brawl IPA file from <a href="https://dl.magicbrawlapk.net/file/Magicbrawlapk/magic-brawl-apk-by-magicbrawlapk.net.apk.ipa" className="text-accent underline">magicbrawlapk.net</a>.</p>
             </div>
             <div className="bg-[#0A1029] rounded-lg p-6 border-l-4 border-[#FFA500]">
               <h3 className="text-lg font-bold text-[#FFA500] mb-2">Step 2: Allow Installation from Untrusted Sources</h3>
@@ -616,7 +616,7 @@ export default function Home() {
           <p className="text-gray-300 mb-6">Keeping Magic Brawl updated ensures you enjoy the newest features, bug fixes, and smooth gameplay:</p>
           <ol className="space-y-3 text-gray-300 list-decimal pl-5">
             <li>Make sure your account is linked with Null&apos;s Connect.</li>
-            <li>Open your browser and go to <Link href="/" className="text-accent hover:underline">magicbrawlapk.net</Link> download page.</li>
+            <li>Open your browser and go to <Link href="/" className="text-accent underline">magicbrawlapk.net</Link> download page.</li>
             <li>Check the version number and release date to confirm it&apos;s newer than your installed version.</li>
             <li>Tap the download button and wait for the latest APK to finish downloading.</li>
             <li>Install over your existing version (no need to uninstall).</li>

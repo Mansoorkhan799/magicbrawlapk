@@ -24,21 +24,17 @@ img {
   height: auto;
 }
 
-/* Prevent layout shift for footer - reserve space, promote to own layer */
+/* Prevent layout shift for footer - reserve space, stable dimensions */
 footer {
-  min-height: 320px;
+  min-height: 380px;
+  overflow: hidden;
   transform: translateZ(0);
   backface-visibility: hidden;
 }
 @media (min-width: 768px) {
   footer {
-    min-height: 300px;
+    min-height: 340px;
   }
-}
-
-/* Optimize font loading to prevent layout shift */
-body {
-  font-display: swap;
 }
 
 /* Prevent font-related layout shifts */
@@ -54,18 +50,6 @@ section.py-8 {
 /* Reserve space for common elements to prevent CLS */
 main {
   min-height: calc(100vh - 200px);
-}
-
-/* Optimize LCP element rendering */
-p.text-lg.text-gray-300.leading-relaxed {
-  contain: layout style;
-  min-height: 120px;
-  display: block;
-}
-
-/* Reduce layout shifts */
-section {
-  contain: layout;
 }
 
 .download-btn {
